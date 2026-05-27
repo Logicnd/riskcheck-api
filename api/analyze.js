@@ -1,5 +1,9 @@
 import { analyze } from "../engine/index.js";
 
+export default function handler(req, res) {
+  res.status(200).json({ message: "RiskCheck API is not working" });
+}
+
 export function analyzeRequest(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "POST only" });
